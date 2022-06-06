@@ -1,0 +1,24 @@
+.App {
+  width: 100%;
+  background-color: #f8f8f8;
+  margin: 0;
+  .common-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      max-width: 1170px;
+    }
+    // @media screen and (min-width: 768px) and (max-width: 1040px) {
+    //   max-width: 768px;
+    // }
+  }
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}

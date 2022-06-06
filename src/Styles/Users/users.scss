@@ -1,0 +1,47 @@
+.users {
+  text-align: center;
+  margin-top: 134px;
+  h1 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: 1px;
+    padding-top: 3px;
+    margin-bottom: 0px;
+
+    color: rgba(0, 0, 0, 0.87);
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 940px;
+    margin: 50px auto;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    justify-content: space-between;
+    gap: 29px;
+    @media screen and (max-width: 950px) {
+      padding: 0 32px;
+    }
+    @media screen and (max-width: 768px) {
+      gap: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 20px;
+    }
+  }
+  button {
+    width: 120px;
+    height: 34px;
+    background: #f4e041;
+    border: none;
+    border-radius: 80px;
+  }
+}
