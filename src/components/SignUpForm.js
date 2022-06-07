@@ -1,12 +1,12 @@
-import React, {useState, useCallback, useEffect} from 'react';
-import {useForm} from 'react-hook-form';
-import {request} from '../api/request';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { request } from '../api/request';
 
-function SignUpForm({getUsers}) {
+function SignUpForm({ getUsers }) {
   const [file, setFile] = useState(null);
   const [currentPosition, setCurrentPosition] = useState(null);
   const [positions, setPositions] = useState([]);
-  const {handleSubmit, register} = useForm({
+  const { handleSubmit, register } = useForm({
     mode: 'onChange',
     reValidateMode: 'onChange',
   });
@@ -96,7 +96,9 @@ function SignUpForm({getUsers}) {
             {file ? file.name : 'Upload your photo'}
           </span>
         </div>
-        <input type="submit" className="button_submit" value="Sign up" />
+        <button type="submit" className="button_submit">
+          Sign up
+        </button>
       </form>
     </div>
   );

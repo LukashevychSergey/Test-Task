@@ -1,5 +1,11 @@
 .h1_wrap {
   margin-top: 138px;
+  @media screen and (max-width: 480px) {
+    margin: 138px 10px 0;
+    h1 {
+      line-height: 39.5px;
+    }
+  }
 }
 h1 {
   font-family: 'Nunito', sans-serif;
@@ -20,10 +26,16 @@ form {
   justify-content: space-around;
   align-items: center;
   margin: 50px 25px 0;
+  @media screen and (max-width: 480px) {
+    margin: 50px 16px 0;
+  }
   p {
     float: left;
     margin-top: -4px;
     margin-bottom: -2px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: -4px;
+    }
   }
   .radio_container {
     display: flex;
@@ -32,9 +44,15 @@ form {
     max-width: 380px;
     width: 100%;
     margin-bottom: 50px;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 24px;
+    }
     ul {
       list-style-type: none;
       padding: 0;
+      @media screen and (max-width: 480px) {
+        margin-top: 9px;
+      }
     }
     .radio {
       display: flex;
@@ -53,20 +71,28 @@ form {
   border: 1px solid #d0cfcf;
   border-radius: 5px;
   padding-left: 15px;
-  &::placeholder {
+  @media screen and (max-width: 480px) {
+    height: 54px;
+    margin-bottom: 50px;
   }
-}
-.input_blue {
-  // accent-color: red;
-  color: #00bdd3;
-  background-color: red;
-  height: 20px; /* not needed */
-  width: 20px; /* not needed */
-  margin-left: 0px;
-  margin-right: 10px;
-}
-.form__input::placeholder {
-  // padding-left: 11px;
+  @media screen and (max-width: 768px) {
+    max-width: 380px;
+    height: 55px;
+  }
+  &::placeholder {
+    @media screen and (max-width: 480px) {
+      letter-spacing: 1px;
+    }
+  }
+  .input_blue {
+    // accent-color: red;
+    color: #00bdd3;
+    background-color: red;
+    height: 20px; /* not needed */
+    width: 20px; /* not needed */
+    margin-left: 0px;
+    margin-right: 10px;
+  }
 }
 .button_submit {
   width: 100px;
