@@ -47,7 +47,7 @@ function SignUpForm({ getUsers, formRef }) {
       <div className="h1_wrap">
         <h1>Working with POST request</h1>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form id="register-form" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
           {...register('name')}
