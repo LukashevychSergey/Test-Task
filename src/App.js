@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {request} from './api/request';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { request } from './api/request';
 import Header from './components/Header';
 import ImageBlock from './components/ImageBlock';
 import '../src/Styles/App/app.scss';
@@ -10,9 +10,13 @@ function App() {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const userRef = useRef(null);
+  const formRef = useRef(null);
 
+  // Use callback to use request functions
   const getUsers = useCallback(async (users, page, count = 6) => {
     const data = await request.getUsers(page, count);
+    //Sorting by day registration users function
     const currentUsers = data.users.sort(
       (a, b) =>
         new Date(b.registration_timestamp) - new Date(a.registration_timestamp)
@@ -23,22 +27,24 @@ function App() {
     setTotalPages(data.total_pages);
   }, []);
 
+  // Request function in useEffect
   useEffect(() => {
     getUsers(users, page);
   }, []);
 
   return (
     <div className="App">
-      <Header />
+      <Header userRef={userRef} formRef={formRef} />
       <div className="common-container">
-        <ImageBlock />
+        <ImageBlock formRef={formRef} />
         <Users
           users={users}
           page={page}
           totalPages={totalPages}
           getUsers={getUsers}
+          userRef={userRef}
         />
-        <SignUpForm getUsers={() => getUsers([], 1)} />
+        <SignUpForm getUsers={() => getUsers([], 1)} formRef={formRef} />
       </div>
     </div>
   );

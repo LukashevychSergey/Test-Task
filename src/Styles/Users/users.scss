@@ -1,6 +1,9 @@
 .users {
   text-align: center;
   margin-top: 134px;
+  @media screen and (max-width: 480px) {
+    margin-top: 137px;
+  }
   h1 {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
@@ -10,8 +13,11 @@
     margin-left: 1px;
     padding-top: 3px;
     margin-bottom: 0px;
-
     color: rgba(0, 0, 0, 0.87);
+    @media screen and (max-width: 480px) {
+      margin: 0 15px;
+      padding-top: 0px;
+    }
   }
   &__container {
     display: flex;
@@ -31,10 +37,12 @@
       padding: 0 32px;
     }
     @media screen and (max-width: 768px) {
-      gap: 16px;
+      gap: 30px;
+      margin: 60px auto;
     }
     @media screen and (max-width: 480px) {
       gap: 20px;
+      padding: 0 15px;
     }
   }
   button {

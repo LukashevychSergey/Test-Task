@@ -1,3 +1,4 @@
+//All the requests according to API
 export const request = {
   getUsers: (page, count) => {
     return fetch(

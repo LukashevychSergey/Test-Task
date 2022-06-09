@@ -10,15 +10,18 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.87);
   padding: 20px;
+  padding-bottom: 13px;
   overflow: hidden;
   gap: 18px;
   @media screen and (max-width: 768px) {
-    width: 27%;
-    flex: 1 1 27%;
+    width: 31%;
+    flex: 1 1 31%;
+    gap: 20px;
   }
   @media screen and (max-width: 480px) {
     width: 100%;
     flex: 1 1 100%;
+    gap: 20px;
   }
   img {
     border-radius: 50px;
@@ -27,5 +30,15 @@
   }
   div {
     width: 100%;
+    @media screen and (max-width: 480px) {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
+}
+
+.user__phone {
+  letter-spacing: 2.5px;
 }

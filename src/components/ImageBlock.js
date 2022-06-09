@@ -1,7 +1,7 @@
 import React from 'react';
-// import main from '../images/main.jpeg';
+import { scrollTo } from '../scrollTo';
 
-function ImageBlock() {
+function ImageBlock({ formRef }) {
   return (
     <div className="image">
       <div className="image__block">
@@ -17,7 +17,13 @@ function ImageBlock() {
             Front-End Development keeps evolving.
           </p>
         </div>
-        <button>Sign up</button>
+        <button
+          onClick={() => {
+            scrollTo(formRef);
+          }}
+        >
+          Sign up
+        </button>
       </div>
     </div>
   );

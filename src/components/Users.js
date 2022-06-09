@@ -1,9 +1,9 @@
 import React from 'react';
 import UserCard from './UserCard';
 
-function Users({users, page, totalPages, getUsers}) {
+function Users({ users, page, totalPages, getUsers, userRef }) {
   return (
-    <div className="users">
+    <div className="users" ref={userRef}>
       <h1>Working with GET request</h1>
       <div className="users__container">
         {users.length > 0 &&
