@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/Test-Task/static/css/main.82adaa45.css",
-    "main.js": "/Test-Task/static/js/main.21af5a9c.js",
+    "main.css": "/Test-Task/static/css/main.11ad4a84.css",
+    "main.js": "/Test-Task/static/js/main.93b19ad7.js",
     "static/js/787.0c3f432a.chunk.js": "/Test-Task/static/js/787.0c3f432a.chunk.js",
     "static/media/main2.jpg": "/Test-Task/static/media/main2.c96fc25d3e5c3f837dac.jpg",
+    "static/media/Nunito-Regular.ttf": "/Test-Task/static/media/Nunito-Regular.bedc35fb703c0b2d1fd5.ttf",
     "static/media/Logo.svg": "/Test-Task/static/media/Logo.3612d8fb2ad660585db537e3d5352df5.svg",
     "index.html": "/Test-Task/index.html",
-    "main.82adaa45.css.map": "/Test-Task/static/css/main.82adaa45.css.map",
-    "main.21af5a9c.js.map": "/Test-Task/static/js/main.21af5a9c.js.map",
+    "main.11ad4a84.css.map": "/Test-Task/static/css/main.11ad4a84.css.map",
+    "main.93b19ad7.js.map": "/Test-Task/static/js/main.93b19ad7.js.map",
     "787.0c3f432a.chunk.js.map": "/Test-Task/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82adaa45.css",
-    "static/js/main.21af5a9c.js"
+    "static/css/main.11ad4a84.css",
+    "static/js/main.93b19ad7.js"
   ]
 }
