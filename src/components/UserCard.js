@@ -8,7 +8,7 @@ function UserCard({ user }) {
       <div>
         <div>{user.position}</div>
         <div>{user.email}</div>
-        <div style={{ letterSpacing: '2.5px' }}>{user.phone}</div>
+        <div className="user__phone">{user.phone}</div>
       </div>
     </div>
   );

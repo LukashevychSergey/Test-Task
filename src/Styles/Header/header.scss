@@ -1,12 +1,10 @@
 .header {
   position: absolute;
-  // width: 2560px;
   height: 52px;
   left: 0px;
   background: #ffffff;
 
   &__wrapper {
-    // width: 1170px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,5 +35,13 @@
       border: none;
       border-radius: 80px;
     }
+  }
+}
+.header_block {
+  width: 100%;
+  background: #fff;
+  .black_block {
+    background-color: #000;
+    height: 60px;
   }
 }

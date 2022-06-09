@@ -1,7 +1,10 @@
-@import '../Styles/Main/main.scss';
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+}
+@import '../Styles/ImageBlock/image-block.scss';
 @import '../Styles/App/app.scss';
 @import '../Styles/Header/header.scss';
 @import '../Styles/Users/users.scss';
 @import '../Styles/UserCard/card.scss';
 @import '../Styles/Form/form.scss';
-@import './common.scss';

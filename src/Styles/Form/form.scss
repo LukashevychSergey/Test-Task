@@ -17,7 +17,6 @@ h1 {
   padding-top: 3px;
   color: rgba(0, 0, 0, 0.87);
   text-align: center;
-  // margin-top: 135px;
 }
 
 form {
@@ -62,7 +61,7 @@ form {
     }
   }
 }
-.form__input {
+.form_input {
   max-width: 361px;
   width: 100%;
   height: 51px;
@@ -85,11 +84,10 @@ form {
     }
   }
   .input_blue {
-    // accent-color: red;
     color: #00bdd3;
     background-color: red;
-    height: 20px; /* not needed */
-    width: 20px; /* not needed */
+    height: 20px;
+    width: 20px;
     margin-left: 0px;
     margin-right: 10px;
   }
@@ -101,4 +99,107 @@ form {
   border: none;
   border-radius: 80px;
   margin-bottom: 100px;
+}
+
+.container_radio {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom_radio {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #00bdd3;
+}
+
+.container_radio:hover input ~ .custom_radio {
+  background-color: #fff;
+}
+
+.container_radio input:checked ~ .custom_radio {
+  border-color: #00bdd3 !important;
+  background-color: #fff;
+}
+
+.custom_radio:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container_radio input:checked ~ .custom_radio:after {
+  display: block;
+}
+
+.container_radio .custom_radio:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00bdd3 !important;
+}
+
+.container_file {
+  max-width: 380px;
+  width: 100%;
+  height: 54px;
+  margin-top: 7px;
+  margin-bottom: 36px;
+  display: flex;
+  @media screen and (max-width: 768px) {
+    margin-top: -28px;
+    margin-bottom: 52px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 50px;
+  }
+}
+input#file-input {
+  display: none;
+}
+input#file-input + label {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  border-radius: 4px 0px 0px 4px;
+  padding: 15px;
+}
+input#file-input + label:hover {
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+}
+
+.custom_file {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 15px;
+  border: 1px solid #d0cfcf;
+  border-left: none;
+  border-radius: 0px 4px 4px 0px;
 }

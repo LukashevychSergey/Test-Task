@@ -1,16 +1,30 @@
 import React from 'react';
 import logo from '../images/Logo.svg';
+import { scrollTo } from '../scrollTo';
 
-function Header() {
+function Header({ userRef, formRef }) {
   return (
-    <div style={{ width: '100%', backgroundColor: '#FFF' }}>
-      <div style={{ width: '100%', backgroundColor: '#000', height: 60 }}></div>
+    <div className="header_block">
+      <div className="black_block"></div>
       <div className="common-container">
         <div className="header__wrapper">
           <img src={logo} alt="#" />
           <div className="header__element">
-            <button>Users</button>
-            <button>Sign up</button>
+            <button
+              onClick={() => {
+                scrollTo(userRef);
+              }}
+            >
+              Users
+            </button>
+
+            <button
+              onClick={() => {
+                scrollTo(formRef);
+              }}
+            >
+              Sign up
+            </button>
           </div>
         </div>
       </div>
